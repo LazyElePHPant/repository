@@ -1,0 +1,14 @@
+<?php
+
+namespace DummyNamespace;
+
+use LazyElePHPant\Repository\Repository;
+use Illuminate\Database\Eloquent\Model;
+
+class DummyClass extends Repository
+{
+    public function model()
+    {
+        return Model::class;
+    }
+}

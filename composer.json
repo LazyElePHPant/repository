@@ -1,0 +1,28 @@
+{
+    "name": "lazyelephpant/repository",
+    "description": "Laravel package to facilitate the repository design pattern functionality across multiple projects.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kevin Pimentel",
+            "email": "kevin@kevinpimentel.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "LazyElePHPant\\Repository\\":"src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LazyElePHPant\\Repository\\RepositoryServiceProvider"
+            ],
+            "aliases": {
+                "Repository": "LazyElePHPant\\Repository\\Facade"
+            }
+        }
+    }
+}
