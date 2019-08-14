@@ -1,4 +1,25 @@
-# repository
-Laravel package to facilitate the repository design pattern functionality across multiple projects.
+# Laravel Implementation of Repository Pattern
 
-https://kevinpimentel.com/blog/14/laravel-package-repository-design-pattern
+Laravel package to facilitate repository design pattern implementation across multiple projects.
+
+## Installation
+
+```
+composer require lazyelephpant/repository
+```
+
+## Plain Repository Class
+
+To generate a repository class without a specific model simply run the following command:
+
+```
+php artisan make:repository
+```
+
+## Model Repository Class
+
+To generate a repository class for a specific model you may specify by defining the `--model`:
+
+```
+php artisan make:repository --model=User
+```
