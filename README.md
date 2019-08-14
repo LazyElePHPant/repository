@@ -13,7 +13,7 @@ composer require lazyelephpant/repository
 To generate a repository class without a specific model simply run the following command:
 
 ```
-php artisan make:repository
+php artisan make:repository NameRepository
 ```
 
 ## Model Repository Class
@@ -21,5 +21,5 @@ php artisan make:repository
 To generate a repository class for a specific model you may specify by defining the `--model`:
 
 ```
-php artisan make:repository --model=User
+php artisan make:repository NameRepository --model=User
 ```
