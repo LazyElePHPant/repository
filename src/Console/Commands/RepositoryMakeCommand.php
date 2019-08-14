@@ -9,6 +9,13 @@ use Symfony\Component\Console\Input\InputOption;
 class RepositoryMakeCommand extends GeneratorCommand
 {
     /**
+     * The console command type
+     *
+     * @var string
+     */
+    protected $type = 'Repository';
+
+    /**
      * The name and signature of the console command.
      *
      * @var string
