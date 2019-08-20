@@ -67,7 +67,18 @@ interface RepositoryInterface
      * @param  array  $columns
      * @return \Illuminate\Database\Eloquent\Model
      */    
-    public function findBy(string $field, mixed $value, $columns = ['*']);
+    public function findBy($field, $value, $columns = ['*']);
+
+    /**
+     * Find a model by its primary key or throw an exception.
+     *
+     * @param  mixed  $id
+     * @param  array  $columns
+     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    public function findOrFail($id, $columns = ['*']);
 
     /**
      * Paginate the given query.

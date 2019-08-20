@@ -59,7 +59,7 @@ abstract class Repository implements RepositoryInterface
     /**
      * @{inheritDoc}
      */
-    public function all($columns = array('*'))
+    public function all($columns = ['*'])
     {
         return $this->model->get($columns);
     }
@@ -101,7 +101,7 @@ abstract class Repository implements RepositoryInterface
     /**
      * @{inheritDoc}
      */
-    public function find($id, $columns = array('*'))
+    public function find($id, $columns = ['*'])
     {
         return $this->model->find($id, $columns);
     }
@@ -109,11 +109,19 @@ abstract class Repository implements RepositoryInterface
     /**
      * @{inheritDoc}
      */
-    public function findBy(string $field, mixed $value, $columns = array('*'))
+    public function findBy($field, $value, $columns = ['*'])
     {
         return $this->model->where($field, $value)
                            ->select($columns)
                            ->first();
+    }
+
+    /**
+     * @{inheritDoc}
+     */
+    public function findOrFail($id, $columns = ['*'])
+    {
+        return $this->model->findOrFail($id, $columns);
     }
 
     /**
